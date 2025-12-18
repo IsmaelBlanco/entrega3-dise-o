@@ -24,14 +24,21 @@ body {
     background-color: $crema;
 }
 
-.card {
+.button {
     border-radius: 8px;
     background-color: $negro;
-
+    padding: 8px 24px 8px 24px;
+    &.small{
+        font-size:24px;
+        font-weight: 100;
+        font-family: $inter;
+        color: $crema;
+    }
     &.big {
         font-size: 44px;
         font-weight: medium;
         font-family: $poppins;
+        color: $crema;
     }
 }
 

@@ -13,14 +13,22 @@ body {
   background-color: #f0f0f0;
 }
 
-.card {
+.button {
   border-radius: 8px;
   background-color: #2b2b2b;
+  padding: 8px 24px 8px 24px;
 }
-.card.big {
+.button.small {
+  font-size: 24px;
+  font-weight: 100;
+  font-family: "Inter", sans-serif;
+  color: #f0f0f0;
+}
+.button.big {
   font-size: 44px;
   font-weight: medium;
   font-family: "Poppins", sans-serif;
+  color: #f0f0f0;
 }
 
 iframe {
@@ -29,4 +37,42 @@ iframe {
   height: 200px; /* alto fijo */
   margin: 5px; /* espacio entre ellos */
   vertical-align: top; /* opcional, para alinearlos arriba */
+}
+
+#hero #hero_CAs {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-evenly;
+}
+#hero #hero_CAs li button img {
+  width: 20px;
+  height: 20px;
+  margin-left: 200px;
+  transform: rotateZ(-90deg);
+  filter: invert(1);
+}
+#hero #hero_CAs li button:hover {
+  transform: scale(1.05);
+  background-color: rgb(30.25, 30.25, 30.25);
+}
+#hero #hero_text {
+  padding-left: 10%;
+  padding-top: 2%;
+}
+#hero #hero_text h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 68px;
+  margin: 0;
+}
+#hero #hero_text span {
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  margin-left: 2%;
+  color: #757575;
+}
+#hero #hero_text #hero_bigCA {
+  position: absolute;
+  right: 5%;
+  width: 30%;
 }/*# sourceMappingURL=index.css.map */

@@ -1,2 +1,46 @@
 @use "template";
 
+#hero{
+    #hero_CAs{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-evenly;
+        li{
+            button{
+                img{
+                    width: 20px;
+                    height: 20px;
+                    margin-left: 200px;
+                    transform: rotateZ(-90deg);
+                    filter: invert(1);
+                }
+                &:hover{
+                    transform: scale(1.05);
+                    background-color: darken($color: template.$negro, $amount: 5);
+                }
+            }
+        }
+    }
+    #hero_text{
+        padding-left:10%;
+        padding-top:2%;
+        h1{
+            font-family: template.$poppins;
+            font-size: 68px;
+            margin:0;
+        }
+        span{
+            font-family: template.$inter;
+            font-size: 28px;
+            margin-left:2%;
+            color:#757575;
+        }
+        #hero_bigCA{
+            position: absolute;
+            right:5%;
+            width:30%;
+            
+        }
+    }
+}

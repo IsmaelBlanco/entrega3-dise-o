@@ -1,7 +1,9 @@
 @use "template";
-
+#header_hr{
+    width: 95%;
+}
 header {
-    height: 100%;
+    height: 90%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -18,7 +20,7 @@ header {
         height: 100px;
         width: auto;
         position: absolute;
-        left:50%;
+        left: 50%;
         transform: translateX(-50%);
     }
     nav {
@@ -27,26 +29,31 @@ header {
             display: flex;
             flex-direction: row;
             align-items: center;
+            padding-right:20px;
             li {
                 margin: 20px;
                 font-family: "Inter", sans-serif;
-                a{
+                a {
                     text-decoration: none;
                     color: black;
                     font-size: 24px;
                     position: relative;
+                    display: inline-block;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
                     &.underline:hover {
                         color: template.$rojo_principal;
-                        &:after{
+                        &:after {
                             content: "";
                             display: block;
                             position: absolute;
-                            left:0;
+                            left: 0;
                             bottom: -5px;
                             width: 0%;
                             height: 2px;
-                            background-color: black;
-                            animation: underline 1s forwards;
+                            background-color: template.$rojo_principal;
+                            animation: underline 0.4s forwards;
                             overflow-x: hidden;
                         }
                     }
@@ -54,26 +61,35 @@ header {
             }
         }
 
-        #profile {
-            width: 30%;
+        #profile, #cart {
             aspect-ratio: 1/1;
-            max-width: 100px;
-            max-height: 100px;
+            max-width: 50px;
+            max-height: 50px;
         }
     }
 }
 
 @keyframes underline {
-  0% {
-    width: 0%;
-    left: 0;
-  }
-  50% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0%;
-    left: 100%;
-  }
+    0% {
+        width: 0%;
+        left: 0;
+    }
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0%;
+        left: 100%;
+    }
+}
+
+//tablet
+@media (max-width: 1023px) {
+
+}
+
+//movil
+@media (max-width: 767px) {
+
 }
