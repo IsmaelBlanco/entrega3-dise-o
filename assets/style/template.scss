@@ -1,0 +1,24 @@
+//Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+$poppins: 'Poppins', sans-serif;
+
+//Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+$inter  : 'Inter', sans-serif;
+
+$crema: #F7F2DB;
+$rojo_principal: #C7020F;
+$rojo_secundario: #D1382B;
+$negro: #2B2B2B;
+
+
+.card{
+    border-radius: 8px;
+    background-color: $negro;
+
+    &.big{
+        font-size:44px;
+        font-weight: medium;
+        font-family: $poppins;
+    }
+}
