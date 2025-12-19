@@ -39,6 +39,13 @@ iframe {
   vertical-align: top; /* opcional, para alinearlos arriba */
 }
 
+#breadcrumb {
+  margin-left: 3%;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #2b2b2b;
+}
+
 #hero #hero_CAs {
   display: flex;
   flex-direction: row;
@@ -75,4 +82,35 @@ iframe {
   position: absolute;
   right: 5%;
   width: 30%;
+  transform: translateY(-50%);
+}
+#hero #searchbar {
+  background-color: rgb(214.5, 214.5, 214.5);
+  padding: 5px;
+  padding-right: 30px;
+  border: 2px solid rgb(201.75, 201.75, 201.75);
+  width: 70%;
+  height: 25vh;
+  justify-self: center;
+  border-radius: 64px;
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#hero #searchbar input {
+  background-color: transparent;
+  width: 90%;
+  border: none;
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+  margin-left: 40px;
+  outline: none;
+}
+#hero #searchbar input :focus {
+  outline: none;
+  border: none;
+}
+#hero #searchbar img {
+  height: 60%;
 }/*# sourceMappingURL=index.css.map */
