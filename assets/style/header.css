@@ -17,6 +17,7 @@ body {
   border-radius: 8px;
   background-color: #2b2b2b;
   padding: 8px 24px 8px 24px;
+  cursor: pointer;
 }
 .button.small {
   font-size: 24px;
