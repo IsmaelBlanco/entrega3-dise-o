@@ -33,11 +33,18 @@ body {
 }
 
 iframe {
-  display: inline-block; /* permite que se alineen horizontalmente */
-  width: 300px; /* ancho fijo o relativo */
-  height: 200px; /* alto fijo */
-  margin: 5px; /* espacio entre ellos */
-  vertical-align: top; /* opcional, para alinearlos arriba */
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: 5px;
+  vertical-align: top;
+}
+
+#breadcrumb {
+  margin-left: 3%;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #2b2b2b;
 }
 
 #header_hr {

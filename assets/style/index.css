@@ -33,11 +33,11 @@ body {
 }
 
 iframe {
-  display: inline-block; /* permite que se alineen horizontalmente */
-  width: 300px; /* ancho fijo o relativo */
-  height: 200px; /* alto fijo */
-  margin: 5px; /* espacio entre ellos */
-  vertical-align: top; /* opcional, para alinearlos arriba */
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: 5px;
+  vertical-align: top;
 }
 
 #breadcrumb {
@@ -123,14 +123,65 @@ iframe {
   height: 60%;
 }
 
+#featuredItems {
+  height: 80vh;
+  width: 90%;
+  border-bottom: 1px solid #2b2b2b;
+  justify-self: center;
+  margin: 5% 0 5% 0;
+  display: flex;
+  flex-direction: column;
+}
+#featuredItems h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+}
+#featuredItems #featuredItemsList {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2%;
+}
+#featuredItems #featuredItemsList .ftdItem {
+  width: 100%;
+  height: 80%;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  display: flex;
+  flex-direction: column;
+}
+#featuredItems #featuredItemsList .ftdItem img {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  height: 10vh;
+  width: 100%;
+  background-color: #2b2b2b;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #f0f0f0;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+}
+
 @keyframes bigCAglow {
   0% {
     scale: 1;
+    box-shadow: none;
   }
   50% {
     scale: 1.05;
+    box-shadow: 0px 0px 20px 5px rgba(209, 56, 43, 0.4);
   }
   100% {
     scale: 1;
+    box-shadow: none;
   }
 }/*# sourceMappingURL=index.css.map */
