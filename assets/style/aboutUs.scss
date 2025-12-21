@@ -1,0 +1,233 @@
+@use "template";
+
+.about-us-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-family: template.$poppins;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: 2rem 0 3rem 0;
+    color: template.$negro;
+    position: relative;
+    
+    &::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 3px;
+        background: linear-gradient(90deg, template.$rojo_principal, template.$rojo_secundario);
+        margin: 1rem auto;
+        border-radius: 2px;
+    }
+}
+
+.content-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+    position: relative;
+    
+    @media (max-width: 1023px) {
+        gap: 40px;
+        margin-bottom: 80px;
+    }
+    
+    @media (max-width: 767px) {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    
+    &.right-aligned {
+        flex-direction: row-reverse;
+        
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+    }
+}
+
+.content-text {
+    flex: 1;
+    min-width: 0;
+    
+    .subtitle {
+        font-family: template.$poppins;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        color: rgba(159, 158, 158, 1);
+        font-weight: normal;
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+        
+        @media (max-width: 767px) {
+            margin-top: 0;
+            text-align: center;
+        }
+    }
+    
+    .paragraph {
+        font-family: template.$poppins;
+        font-size: clamp(1rem, 1.8vw, 1.1rem);
+        color: template.$negro;
+        font-weight: normal;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.content-image {
+    flex: 1;
+    min-width: 0;
+    
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(199, 2, 15, 0.15);
+        }
+    }
+}
+
+.right-aligned .content-text {
+    @media (min-width: 768px) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.content-section::after {
+    @media (min-width: 768px) {
+        content: '';
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 1px;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(199, 2, 15, 0.2) 20%, 
+            rgba(199, 2, 15, 0.4) 50%, 
+            rgba(199, 2, 15, 0.2) 80%, 
+            transparent 100%);
+    }
+}
+
+.content-section:last-child::after {
+    display: none;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.content-section.right-aligned {
+    animation-delay: 0.2s;
+}
+
+@media (max-width: 767px) {
+    .about-us-page {
+        padding: 20px 15px;
+    }
+    
+    h1 {
+        margin: 1rem 0 2rem 0;
+        font-size: 2.2rem;
+    }
+    
+    .content-text {
+        text-align: center;
+        
+        .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .paragraph {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+    }
+    
+    .content-image {
+        order: -1;
+        
+        img {
+            border-radius: 8px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .content-section {
+        gap: 40px;
+    }
+    
+    .content-text {
+        .subtitle {
+            font-size: 1.6rem;
+        }
+        
+        .paragraph {
+            font-size: 1rem;
+        }
+    }
+}
+
+.img1, .img2 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    
+    @media (max-width: 767px) {
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.content-text {
+    .subtitle:focus,
+    .paragraph:focus {
+        outline: 2px solid template.$rojo_principal;
+        outline-offset: 4px;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .subtitle {
+        color: #666;
+    }
+    
+    .paragraph {
+        color: #000;
+    }
+}
+
