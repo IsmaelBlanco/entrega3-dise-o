@@ -59,8 +59,8 @@ h1 {
     .subtitle {
         font-family: template.$poppins;
         font-size: clamp(1.5rem, 3vw, 2rem);
-        color: rgba(159, 158, 158, 1);
-        font-weight: normal;
+        color: template.$negro;
+        font-weight: 500;
         margin-bottom: 1.5rem;
         line-height: 1.4;
         
@@ -220,14 +220,3 @@ h1 {
         outline-offset: 4px;
     }
 }
-
-@media (prefers-contrast: high) {
-    .subtitle {
-        color: #666;
-    }
-    
-    .paragraph {
-        color: #000;
-    }
-}
-

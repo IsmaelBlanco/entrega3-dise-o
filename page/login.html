@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia sesión - Noche</title>
+    <link rel="stylesheet" href="../assets/style/login.css">
+    <script src="../assets/script/login.js" defer></script>
+</head>
+<body>
+    <a id="a_go_back" href="../index.html"><img src="../assets/media/SVG/arrow_down.svg" alt="Volver" id="back">Volver</a>
+<div class="box" id="mainBox">
+    <div class="form-box register-box">
+        <h2>Crear Cuenta</h2>
+        <input type="text" placeholder="Usuario">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Pass">
+        <button onclick="/*enviar('registro')*/ location.href = '../index.html'">Registrar</button>
+    </div>
+
+    <div class="form-box login-box">
+        <h2>Bienvenido</h2>
+        <input type="text" placeholder="Usuario">
+        <input type="password" placeholder="Pass">
+        <button onclick="/*enviar('registro')*/ location.href = '../page/profile.html'">Entrar</button>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div id="textSide">
+            <h2 id="title">¿Eres nuevo?</h2>
+            <p id="desc">Regístrate para ver más contenido</p>
+            <button id="swpbtn" class="ghost" onclick="toggle()">Ya tengo cuenta</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
