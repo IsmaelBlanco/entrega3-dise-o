@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style/index.css">
+    <!-- Iconos de Font Awesome, principalmente para RRSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Document</title>
 </head>
 
@@ -24,8 +26,10 @@
                             title="Arrow"></button></li>
             </ul>
             <div id="hero_text">
-                <h1>Tu compra, en casa</h1>
-                <span>Sin filas, sin estrés, solo productos que quieres.</span>
+                <div id="col_ht">
+                    <h1>Tu compra, en casa</h1>
+                    <span>Sin filas, sin estrés, solo productos que quieres.</span>
+                </div>
                 <button id="hero_bigCA" class="button big">Hacer la compra</button>
             </div>
             <div id="searchbar"><input type="text" placeholder="¿Buscas algo en concreto?"><img
@@ -35,7 +39,7 @@
             <!-- En un futuro será un carrusel con generación dinámica por PHP-->
             <h2>Nuestros productos destacados</h2>
             <section id="featuredItemsList">
-                <article class="ftdItem">
+                <!-- <article class="ftdItem">
                     <img src="./assets/media/imgBajaFidelidad.png">
                     <h3>Producto 1</h3>
                     <span>Producto super saludable y de gran calidad</span>
@@ -70,7 +74,7 @@
                     <h3>Producto 6</h3>
                     <span>Producto super saludable y de gran calidad</span>
                     <button class="button">Ver producto</button>
-                </article>
+                </article> -->
             </section>
         </section>
     </main>
@@ -78,10 +82,8 @@
         <div class="footer-brand">
             <h3>Noche</h3>
             <div class="social">
-                <a href="#">FB</a>
-                <a href="#">IN</a>
-                <a href="#">YT</a>
-                <a href="#">IG</a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
 

@@ -10,14 +10,13 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     #menu {
         margin-left: 50px;
         width: 50px;
         height: 50px;
         position: relative;
         transition: transform 0.3s ease;
-        display: flex;
         flex-direction: row;
         align-items: center;
         text-decoration: none;
@@ -25,10 +24,21 @@ header {
         font-family: template.$poppins;
         font-size:32px;
         gap:10px;
+        display:none;
         &:hover {
             cursor: pointer;
             transform: scale(1.1);
             filter: invert(32%) sepia(98%) saturate(7432%) hue-rotate(355deg) brightness(80%);
+        }
+        @media (max-width: template.$mobile) {
+            display: flex;
+            width:35px;
+            height: 35px;
+            font-size: 35px;
+            margin-left:20px;
+            img{
+                height: 100%;
+            }
         }
     }
     #title {
@@ -37,14 +47,21 @@ header {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        @media (max-width: template.$mobile) {
+            left:100%;
+            transform: translateX(-120%);
+            height:70px;
+        }
     }
     nav {
+        width:100%;
         ul {
             list-style: none;
             display: flex;
             flex-direction: row;
             align-items: center;
             padding-right: 20px;
+            justify-content: space-between;
             li {
                 margin: 20px;
                 font-family: "Inter", sans-serif;
@@ -81,6 +98,9 @@ header {
             aspect-ratio: 1/1;
             max-width: 50px;
             max-height: 50px;
+            @media (max-width: template.$mobile) {
+            display: none;
+        }
         }
     }
 }
