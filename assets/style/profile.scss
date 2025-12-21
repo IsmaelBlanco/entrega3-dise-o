@@ -1,0 +1,208 @@
+@use "template";
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    flex: 1;
+    background-color: template.$crema;
+
+    @media (max-width: template.$tablet) {
+        grid-template-columns: 200px 1fr;
+    }
+
+    @media (max-width: template.$mobile) {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =======================
+   SIDEBAR
+======================= */
+.profile-sidebar {
+    background-color: white;
+    border-right: 1px solid rgba(template.$negro, 0.1);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: template.$mobile) {
+        flex-direction: row;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, template.$rojo_principal, template.$rojo_secundario);
+        margin-bottom: 12px;
+
+        @media (max-width: template.$mobile) {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 0;
+        }
+    }
+
+    .username {
+        font-family: template.$poppins;
+        font-size: 20px;
+        font-weight: 600;
+        color: template.$negro;
+        margin-bottom: 24px;
+
+        @media (max-width: template.$mobile) {
+            margin-bottom: 0;
+        }
+    }
+
+    .profile-menu {
+        width: 100%;
+
+        @media (max-width: template.$mobile) {
+            display: none;
+        }
+
+        a {
+            display: block;
+            padding: 12px 14px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            font-family: template.$inter;
+            font-size: 15px;
+            color: rgba(template.$negro, 0.6);
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(template.$rojo_principal, 0.08);
+                color: template.$rojo_principal;
+            }
+
+            &.active {
+                background-color: rgba(template.$rojo_principal, 0.15);
+                color: template.$rojo_principal;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+/* =======================
+   MAIN CONTENT
+======================= */
+.profile-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media (max-width: template.$tablet) {
+        padding: 24px;
+    }
+
+    @media (max-width: template.$mobile) {
+        padding: 16px;
+    }
+}
+
+/* =======================
+   CARDS
+======================= */
+.card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 8px 24px rgba(template.$negro, 0.05);
+
+    h3 {
+        font-family: template.$poppins;
+        font-size: 22px;
+        font-weight: 600;
+        color: template.$negro;
+        margin-bottom: 20px;
+    }
+}
+
+/* =======================
+   FORMULARIOS
+======================= */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    @media (max-width: template.$mobile) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-family: template.$inter;
+        font-size: 13px;
+        color: rgba(template.$negro, 0.6);
+        margin-bottom: 6px;
+    }
+
+    input {
+        padding: 12px 14px;
+        border-radius: 8px;
+        border: 1px solid rgba(template.$negro, 0.15);
+        font-family: template.$inter;
+        font-size: 15px;
+        background-color: template.$crema;
+
+        &:focus {
+            outline: none;
+            border-color: template.$rojo_principal;
+            background-color: white;
+        }
+
+        &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    }
+}
+
+/* =======================
+   CHECKBOX
+======================= */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    label {
+        font-family: template.$inter;
+        font-size: 15px;
+        color: template.$negro;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        input {
+            accent-color: template.$rojo_principal;
+            cursor: pointer;
+        }
+    }
+}
+
+/* =======================
+   BOTONES
+======================= */
+.card .btn {
+    @extend .button;
+    @extend .small;
+    background: linear-gradient(135deg, template.$rojo_principal, template.$rojo_secundario);
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(template.$rojo_principal, 0.3);
+    }
+}

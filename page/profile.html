@@ -4,8 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi perfil - Noche</title>
+    <link rel="stylesheet" href="../assets/style/profile.css">
 </head>
 <body>
-    
+   <div class="profile-layout">
+  <aside class="profile-sidebar">
+    <div class="avatar"></div>
+    <h2 class="username">Nombre Usuario</h2>
+
+    <nav class="profile-menu">
+      <a class="active">Perfil</a>
+      <a>Configuración</a>
+      <a>Seguridad</a>
+      <a>Cerrar sesión</a>
+    </nav>
+  </aside>
+  
+  <main class="profile-content">
+    <section class="card">
+      <h3>Información personal</h3>
+      <div class="grid-2">
+        <div class="field">
+          <label>Email</label>
+          <input type="text" value="usuario@email.com" disabled>
+        </div>
+        <div class="field">
+          <label>Usuario</label>
+          <input type="text" value="usuario123">
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Preferencias</h3>
+      <div class="checkbox-group">
+        <label><input type="checkbox" checked> Notificaciones</label>
+        <label><input type="checkbox"> Modo oscuro</label>
+        <label><input type="checkbox" checked> Emails promocionales</label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Seguridad</h3>
+      <button class="btn">Cambiar contraseña</button>
+    </section>
+  </main>
+</div>
+
 </body>
 </html>
